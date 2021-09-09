@@ -7,6 +7,7 @@ import {score } from './score.js';
 
 let lastRenderTime = 0;
 let gameOver = false
+
 const gameBoard = document.getElementById('game-board')
 
 // Game main loop
@@ -34,8 +35,9 @@ window.requestAnimationFrame(main);
 function update() {
     updateSnake()
     updateFood()
-    checkBorderCollision()
     checkDeath()
+    borderCollision()
+    // drawBorders()
 }
 
 function draw() {
@@ -44,13 +46,34 @@ function draw() {
     drawFood(gameBoard)
 }
 
-function checkBorderCollision(){
-    if(outsideGrid(getSnakeHead())) {
-        console.log(getSnakeHead())
-        resetSnakeHead()
-    }
-}
 
 function checkDeath() {
     gameOver = snakeIntersection()
 }
+
+let bordersToggle = true;
+
+export function borderCollision(){
+    if(outsideGrid(getSnakeHead()) && bordersToggle) {
+        gameOver = bordersToggle
+    } else {
+        resetSnakeHead()
+    }
+}
+/*
+const borderCells = [{x: 12, y: 13}]
+
+function drawBorders(gameBoard){
+    if (bordersToggle) {
+        borderCells.forEach(segment => {
+            const borderElement = document.createElement('div')
+            borderElement.style.gridRowStart = segment.y
+            borderElement.style.gridColumnStart = segment.x
+            borderElement.classList.add('border')
+            gameBoard.appendChild(borderElement)
+            })
+    }
+    
+    }
+}
+*/
