@@ -1,10 +1,12 @@
 import { getInputDirection} from "./input.js";
+import { GRID_SIZE } from "./grid.js";
+
 
 export let SNAKE_SPEED = 5;
 const snakeBody = [{x: 11, y: 11}]
 let newSegments = 0
 
-// Fonction pour contrôler le serpent
+// Function to control the snake's direction.
 export function update() {
     addSegments()
     const inputDirection = getInputDirection()
@@ -16,21 +18,21 @@ export function update() {
     snakeBody[0].y += inputDirection.y
 }
 
-// Fonction pour téléporter la tête du serpent de l'autre côté de la grille
+// Function to move the snake's head position to the opposite side of the screen.
 export function resetSnakeHead() {
     if (snakeBody[0].x === 0) {
-        snakeBody[0].x = 21
-    } else if (snakeBody[0].x === 22) {
-        snakeBody[0].x = 0
+        snakeBody[0].x = GRID_SIZE -1
+    } else if (snakeBody[0].x === GRID_SIZE) {
+        snakeBody[0].x = 1
     } else if (snakeBody[0].y === 0) {
-        snakeBody[0].y = 21
-    } else if (snakeBody[0].y === 22) {
-        snakeBody[0].y = 0
+        snakeBody[0].y = GRID_SIZE -1
+    } else if (snakeBody[0].y === GRID_SIZE) {
+        snakeBody[0].y = 1
     }
 
 }
 
-// Fonction pour afficher le serpent à l'écran
+// Function to draw the snake on the screen.
 export function draw(gameBoard) {
     snakeBody.forEach(segment => {
         const snakeElement = document.createElement('div')
@@ -40,7 +42,7 @@ export function draw(gameBoard) {
         gameBoard.appendChild(snakeElement)
     })
 }
-// Fonction pour allonger le serpent
+// Function to expand the size of the snake.
 export function expandSnake(amount) {
     newSegments += amount
     if (SNAKE_SPEED < 10) {
@@ -48,7 +50,7 @@ export function expandSnake(amount) {
     }
 }
 
-// Fonction pour
+// Fonction to create snake segments.
 export function onSnake(position, {ignoreHead = false} = {}) {
     return snakeBody.some((segment, index) => {
         if (ignoreHead && index === 0) return false
@@ -56,23 +58,23 @@ export function onSnake(position, {ignoreHead = false} = {}) {
     })
 }
 
-// Fonction pour obtenir la position de la tête du serpent
+// Function to get the position of the snake's head.
 export function getSnakeHead() {
     return snakeBody[0]
 
 }
 
-// Fonction pour 
+// Function to detect that the snake intersect itself.
 export function snakeIntersection() {
     return onSnake(snakeBody[0], { ignoreHead: true })
 }
 
-// Fonction pour comparer la position de deux objets
+// Function to check if two objects are on the same spot.
 function equalPositions(pos1, pos2) {
     return pos1.x === pos2.x && pos1.y === pos2.y
 }
 
-// Fonction pour allonger le serpent
+// Function to expand the snake with 1 new square.
 function addSegments() {
     for (let i = 0; i < newSegments; i++) {
         snakeBody.push({ ...snakeBody[snakeBody.length - 1] })

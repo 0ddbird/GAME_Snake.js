@@ -2,13 +2,13 @@ import { onSnake, expandSnake } from './snake.js';
 import { randomGridPosition } from './grid.js';
 import {updateScore} from './score.js';
 
-// Position initiale de la nourriture
+// Food initial position.
 let food = { x: 10, y: 1 };
 
-// Taux d'allongement du serpent
+// Snake expansion rate (1 = 1 cell).
 let EXPANSION_RATE = 1
 
-// Fonction pour déclencher l'allongement du serpent en cas de contact avec la nourriture
+// Function to expand the snake if it reaches the food.
 export function update() {
     if(onSnake(food)) {
         expandSnake(EXPANSION_RATE)
@@ -17,7 +17,7 @@ export function update() {
     }
 }
 
-// Fonction pour afficher la nourriture à l'écran
+// Function to draw the food on the screen.
 export function draw(gameBoard) {
     const foodElement = document.createElement('div')
     foodElement.style.gridRowStart = food.y
@@ -26,7 +26,7 @@ export function draw(gameBoard) {
     gameBoard.appendChild(foodElement)
     }
 
-// Fonction pour définir une position aléatoire pour la nourriture
+// Function to get a random position for the next food spawn.
 function getRandomFoodPosition() {
     let newFoodPosition
     while (newFoodPosition == null || onSnake(newFoodPosition)) {

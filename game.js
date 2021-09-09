@@ -9,9 +9,9 @@ let lastRenderTime = 0;
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
 
-// Boucle principale du jeu
+// Game main loop
 function main(currentTime) {
-    // Vérification que les conditions de jeu sont réunies, sinon écran Game Over
+    // Start game or Game over screen
     if(gameOver) {
         if (confirm(`GAME OVER.\n\nCONGRATULATIONS\nYOUR SCORE WAS ${score}!\n\nPress OK to restart.`)) {
             document.location.reload();

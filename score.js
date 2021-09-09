@@ -1,16 +1,8 @@
-/* 
-Score doit afficher le total de nourriture mangée par le serpent au cours de la partie.
-Sa valeur initiale est de 0.
-Sa valeur s'incrémente de 1 a chaque fois que le serpent gobe la nourriture.
-Le score doit être affiché à l'écran du joueur, il faut donc rajouter un bloc pour le compteur dans la page HTML.
-On viendra modifier le compteur a chaque incrément.
-*/
+// Definition of the initial player score
 export let score = 0;
 
+// Function to increment the player score by 1 and update the displayed text in the page.
 export function updateScore() {
     score++;
     document.getElementById("score").innerHTML = score;
 }
-
-
-// Récupérer l'evenement 

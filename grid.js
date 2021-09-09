@@ -1,6 +1,6 @@
-const GRID_SIZE = 21
+export const GRID_SIZE = 21;
 
-// Fonction pour définir des coordonnées (x,y) aléatoires à l'intérieur de la grille
+// FUnction to define random (x, y) coordinates within the grid limits.
 export function randomGridPosition() {
     return {
         x: Math.floor(Math.random() * GRID_SIZE) + 1,
@@ -8,7 +8,7 @@ export function randomGridPosition() {
     }
 }
 
-// Fonction pour définir les limites de la grille
+// Function to set grid limits.
 export function outsideGrid(position) {
     return (
         position.x < 1 || position.x > GRID_SIZE ||

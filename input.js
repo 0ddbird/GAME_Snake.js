@@ -1,6 +1,8 @@
+// Initializing direction variables.
 let inputDirection = { x: 0, y: 0 };
 let lastInputDirection = { x: 0, y: 0 };
 
+// Getting inputs from the keyboard arrows.
 window.addEventListener ('keydown', e => {
     switch (e.key) {
         case 'ArrowUp':
@@ -22,7 +24,7 @@ window.addEventListener ('keydown', e => {
             break
     }
 })
-
+// Gives current direction input.
 export function getInputDirection() {
     lastInputDirection = inputDirection
     return inputDirection
