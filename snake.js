@@ -21,13 +21,13 @@ export function update() {
 // Function to move the snake's head position to the opposite side of the screen.
 export function resetSnakeHead() {
     if (snakeBody[0].x === 0) {
-        snakeBody[0].x = GRID_SIZE -1
-    } else if (snakeBody[0].x === GRID_SIZE) {
-        snakeBody[0].x = 1
+        snakeBody[0].x = GRID_SIZE
+    } else if (snakeBody[0].x === GRID_SIZE + 1) {
+        snakeBody[0].x = 0
     } else if (snakeBody[0].y === 0) {
-        snakeBody[0].y = GRID_SIZE -1
-    } else if (snakeBody[0].y === GRID_SIZE) {
-        snakeBody[0].y = 1
+        snakeBody[0].y = GRID_SIZE
+    } else if (snakeBody[0].y === GRID_SIZE + 1) {
+        snakeBody[0].y = 0
     }
 
 }
