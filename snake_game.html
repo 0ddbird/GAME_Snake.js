@@ -5,72 +5,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        
-
-
-        <title>Snake</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-            body {
-                height: 100vh;
-                width: 100vw;
-                font-family: Roboto;
-                font-weight:900;
-                font-size:x-large;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-                background-color: black;
-            }
-
-            #container {
-                background-color:rgb(44, 44, 44);
-                color:rgb(195, 156, 26);
-                display:flex;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 10vmin;
-                margin-bottom: 10vmin;
-            }
-
-            #subcontainer {
-                display:flex;
-                flex-direction:row;
-            }
-
-            #game-board {
-                background-color: rgb(22, 22, 22);
-                width: 80vmin;
-                height: 80vmin;
-
-                display: grid;
-                grid-template-rows: repeat(21, 1fr);
-                grid-template-columns: repeat(21, 1fr);
-
-            }
-            .border {
-                background-color:rgb(105, 0, 0) ;
-            }
-            .snake {
-                background-color: hsl(162, 70%, 30%);
-                border: .25vmin solid rgb(12, 24, 21);
-            }
-            .food {
-                background-color: rgb(192, 140, 17);
-                border: .25vmin solid rgb(173, 78, 0);
-            }
-            
-            .score {
-                background: rgb(37, 37, 37);
-            }
-        </style>
+        <link rel="icon" type="image/png" href="snake_js_icon.png">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Snake.js</title>
         <script src="game.js" defer type="module"></script>
     </head>
 
     <body>
         <div id="container">
-            <div>SNAKE GAME</div>
+            <h1>SNAKE GAME</h1>
+            <p>A game made thanks to Web Dev Simplified YouTube channel</p>
+            <a href="https://www.youtube.com/watch?v=QTcIXok9wNY">How To Code The Snake Game In Javascript</a>
             <div id="subcontainer">
                 <div style="align-items:flex-end;">Score :  </div>
                 <div id="score" style="color:rgb(241, 169, 1) ; margin-left: 1vmin;">0</div>
