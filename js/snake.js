@@ -1,5 +1,5 @@
-import { getInputDirection} from "./input.js";
-import { GRID_SIZE } from "./grid.js";
+import { getInputDirection} from "js/input.js";
+import { GRID_SIZE } from "js/grid.js";
 
 
 export let SNAKE_SPEED = 5;

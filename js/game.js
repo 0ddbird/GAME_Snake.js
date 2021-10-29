@@ -1,7 +1,7 @@
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, resetSnakeHead } from './snake.js';
-import { update as updateFood, draw as drawFood } from './food.js';
-import { outsideGrid } from './grid.js';
-import {score } from './score.js';
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, resetSnakeHead } from 'js/snake.js';
+import { update as updateFood, draw as drawFood } from 'js/food.js';
+import { outsideGrid } from 'js/grid.js';
+import {score } from 'js/score.js';
 //import { updateScore} from './score.js';
 
 
