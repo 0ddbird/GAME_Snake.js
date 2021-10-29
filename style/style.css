@@ -1,54 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
 
 body {
-    height: 100vh;
-    width: 100vw;
-    font-family: Roboto;
-    font-weight:900;
-    font-size:x-large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: black;
+  height: 100vh;
+  width: 100vw;
+  font-family: Roboto;
+  color: white;
+  background-color: #2c2c2c;
 }
 
 #container {
-    background-color:rgb(44, 44, 44);
-    color:rgb(195, 156, 26);
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10vmin;
-    margin-bottom: 10vmin;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #subcontainer {
-    display:flex;
-    flex-direction:row;
+  display: flex;
+}
+
+#tip {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2b97df;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+header h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 32px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #game-board {
-    background-color: rgb(22, 22, 22);
-    width: 80vmin;
-    height: 80vmin;
-    display: grid;
-    grid-template-rows: repeat(21, 1fr);
-    grid-template-columns: repeat(21, 1fr);
+  background-color: #161616;
+  width: 70vmin;
+  height: 70vmin;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+  margin-bottom: 30px;
+}
 
-}
-.border {
-    background-color:rgb(105, 0, 0) ;
-}
 .snake {
-    background-color: hsl(162, 70%, 30%);
-    border: .25vmin solid rgb(12, 24, 21);
-}
-.food {
-    background-color: rgb(192, 140, 17);
-    border: .25vmin solid rgb(173, 78, 0);
+  background-color: #178262;
+  /* border: .25vmin solid rgb(12, 24, 21); */
 }
 
-.score {
-    background: rgb(37, 37, 37);
+.food {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff9b29;
+  background-color: #1b1b1b;
 }
+
+.food::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f805";
+}
+
+#score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 10px;
+  background-color: #178262;
+  margin: 10px 0 10px 0;
+  font-weight: 700;
+  color: white;
+}
+
+#score {
+  margin-left: 1ch;
+}
+
+/*# sourceMappingURL=style.css.map */

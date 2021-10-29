@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Roboto;
+    color: white;
+    background-color:rgb(44, 44, 44);
+}
+
+#container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#subcontainer {
+    display:flex;
+}
+
+#tip {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(43, 151, 223);
+}

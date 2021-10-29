@@ -1,7 +1,7 @@
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, resetSnakeHead } from 'js/snake.js';
-import { update as updateFood, draw as drawFood } from 'js/food.js';
-import { outsideGrid } from 'js/grid.js';
-import {score } from 'js/score.js';
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, resetSnakeHead } from '../js/snake.js';
+import { update as updateFood, draw as drawFood } from '../js/food.js';
+import { outsideGrid } from '../js/grid.js';
+import {score } from '../js/score.js';
 //import { updateScore} from './score.js';
 
 
@@ -37,7 +37,6 @@ function update() {
     updateFood()
     checkDeath()
     borderCollision()
-    // drawBorders()
 }
 
 function draw() {
@@ -53,27 +52,8 @@ function checkDeath() {
 
 let bordersToggle = true;
 
-export function borderCollision(){
-    if(outsideGrid(getSnakeHead()) && bordersToggle) {
-        gameOver = bordersToggle
-    } else {
+export function borderCollision() {
+    if( outsideGrid(getSnakeHead()) ) {
         resetSnakeHead()
     }
 }
-/*
-const borderCells = [{x: 12, y: 13}]
-
-function drawBorders(gameBoard){
-    if (bordersToggle) {
-        borderCells.forEach(segment => {
-            const borderElement = document.createElement('div')
-            borderElement.style.gridRowStart = segment.y
-            borderElement.style.gridColumnStart = segment.x
-            borderElement.classList.add('border')
-            gameBoard.appendChild(borderElement)
-            })
-    }
-    
-    }
-}
-*/

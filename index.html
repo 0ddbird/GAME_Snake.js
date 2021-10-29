@@ -4,23 +4,43 @@
         <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+        
         <link rel="icon" type="image/png" href="/assets/snake_js_icon.png">
         <link rel="stylesheet" href="/style/style.css" type="text/css">
         <title>Snake.js</title>
-        <script src="js/game.js" defer type="module"></script>
+        <script src="https://kit.fontawesome.com/52b9d34509.js" crossorigin="anonymous"></script>
+        <script src="/js/game.js" defer type="module"></script>
     </head>
 
     <body>
+        <header>
+            <h1>A JavaScript Snake Game</h1>
+        </header>
+        
         <div id="container">
-            <h1>SNAKE GAME</h1>
-            <p>A game made thanks to Web Dev Simplified YouTube channel</p>
-            <a href="https://www.youtube.com/watch?v=QTcIXok9wNY">How To Code The Snake Game In Javascript</a>
-            <div id="subcontainer">
-                <div style="align-items:flex-end;">Score :  </div>
-                <div id="score" style="color:rgb(241, 169, 1) ; margin-left: 1vmin;">0</div>
+            
+            <div id="score-container">
+                <div>Score :</div>
+                <div id="score">0</div>
             </div>
+            <p id="tip">Use your keyboard arrow keys to start playing!</p>
+            <div id=arrows_container>
+                <i class="fas fa-arrow-circle-up"></i>
+                <i class="fas fa-arrow-circle-left"></i>
+                <i class="fas fa-arrow-circle-right"></i>
+                <i class="fas fa-arrow-circle-down"></i>
+            </div>
+            
             <div id="game-board"></div>
         </div>
+
+        <footer>
+            <span>A game made thanks to <i>Web Dev Simplified</i> YouTube channel.</span>
+            <a href="https://www.youtube.com/watch?v=QTcIXok9wNY">Watch tutorial: How To Code The Snake Game In Javascript</a>
+        </footer>
+        
     </body>
 </html>
