@@ -84,7 +84,7 @@ body {
   background-color: #232323;
   background-size: 100px;
   /* @include a.element-color(#fff); */
-  background-image: url("../../assets/snake_background_dgrey.svg");
+  background-image: url("../assets/snake_background_dgrey.svg");
 }
 
 #container {
