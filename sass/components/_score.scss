@@ -14,4 +14,20 @@
 #score {
     margin-left: 1ch;
     font-size: 28px;
+    /* transform: scale(2);
+    transition: transform .5s ease-in-out; */
+    animation: 1s ease-in-out popUp;
+
+    @keyframes popUp {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
 }
