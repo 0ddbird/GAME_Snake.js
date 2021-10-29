@@ -6,19 +6,23 @@
     grid-template-rows: repeat(21, 1fr);
     grid-template-columns: repeat(21, 1fr);
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .snake {
     background-color: hsl(162, 70%, 30%);
-    /* border: .25vmin solid rgb(12, 24, 21); */
+    border-radius: 5px;
+    
 }
 .food {
     position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
+    border-radius: 100%;
     color:rgb(255, 155, 41);
-    background-color:rgb(27, 27, 27);
+    box-shadow:     0 0 10px 10px rgba(255, 208, 0, .12),
+                    0 0 20px 30px rgba(255, 208, 0, .12) inset;
 }
 
 .food::after {

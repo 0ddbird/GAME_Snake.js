@@ -2,14 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5em 2em .5em 2em;
+    padding: 1em 2em;
     border-radius: 10px;
-    background-color: hsl(162, 70%, 30%);
+    background-color: rgb(255, 155, 41);
     margin: 10px 0 10px 0;
     font-weight: 700;
-    color: white;
+    font-size: 20px;
+    color: black;
 }
 
 #score {
     margin-left: 1ch;
+    font-size: 28px;
 }

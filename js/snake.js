@@ -3,8 +3,8 @@ import { GRID_SIZE } from "../js/grid.js";
 
 
 export let SNAKE_SPEED = 5;
-const snakeBody = [{x: 11, y: 11}]
-let newSegments = 0
+const snakeBody = [{x: 11, y: 11}];
+let newSegments = 0;
 
 // Function to control the snake's direction.
 export function update() {

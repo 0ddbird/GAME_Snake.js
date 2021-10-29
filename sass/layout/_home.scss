@@ -1,9 +1,13 @@
+@use "../abstracts/" as a;
 body {
     height: 100vh;
     width: 100vw;
     font-family: Roboto;
     color: white;
-    background-color:rgb(44, 44, 44);
+    background-color:rgb(35, 35, 35);
+    background-size: 100px;
+    /* @include a.element-color(#fff); */
+    background-image: url("../../assets/snake_background_dgrey.svg");
 }
 
 #container {
@@ -24,3 +28,4 @@ a {
     text-decoration: none;
     color: rgb(43, 151, 223);
 }
+
